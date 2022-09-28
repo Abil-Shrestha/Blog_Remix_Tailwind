@@ -1,0 +1,31 @@
+---
+title: Blog
+date: 2022-09-27
+meta:
+    title: Remix Blog
+---
+
+## <h1 className='text-center'> **Blogging with REMIX** </h1>
+
+
+React, Angular, and Vue are excellent frameworks for getting web applications up and running quickly with consistent structures. They are all built on top of JavaScript though, so let’s take a look at how we can do the nice things that the big frameworks do, using only vanilla JavaScript.
+
+This article may be of interest to developers who have used these frameworks in the past but never quite understood what they’re doing under the hood. We’ll explore different aspects of these frameworks by demonstrating how to build a stateful web app using only vanilla JavaScript.
+```js
+function hello(){
+    return 'hello';
+    }
+```
+
+State management
+Managing state is something that React, Angular, and Vue do internally or via libraries such as Redux or Zustand. However, state can be as simple as a JavaScript object containing all the property-value key pairs that are of interest to your app.
+
+If you’re building the classic to-do list app, your state will probably contain a property like currentTodoItemID and if its value is null, your app might display the full list of all the to-do items.
+
+If currentTodoItemID is set to the ID of a particular todoItem, the app might display that todoItem's details. If you’re building a game, your state may contain properties and values such as playerHealth = 47.5 and currentLevel = 2.
+
+It doesn’t really matter the shape or size of the state; what’s important is how your app’s components change its properties and how other components react to those changes.
+
+This brings us to our first bit of magic: the Proxy object.
+
+Proxy objects are native to JavaScript starting with ES6 and can be used to monitor an object for changes. To see how to leverage proxy objects in JavaScript, let’s look at some example code in the below index.js file using an npm module called on-change.
